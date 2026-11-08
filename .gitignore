@@ -42,3 +42,4 @@ apps/web/ssl/*.crt
 .idea/
 *.log
 skills-main/
+
