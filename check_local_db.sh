@@ -1,0 +1,2 @@
+PGPASSWORD=123456 psql -U postgres -h host.docker.internal -p 5432 -d edumaster -c "SELECT tbl, cnt FROM (SELECT 'students' as tbl, COUNT(*) as cnt FROM students UNION ALL SELECT 'classes', COUNT(*) FROM classes UNION ALL SELECT 'teachers', COUNT(*) FROM teachers UNION ALL SELECT 'subjects', COUNT(*) FROM subjects UNION ALL SELECT 'exam_grades', COUNT(*) FROM exam_grades UNION ALL SELECT 'student_documents', COUNT(*) FROM student_documents UNION ALL SELECT 'up_users', COUNT(*) FROM up_users UNION ALL SELECT 'audit_logs', COUNT(*) FROM audit_logs) t ORDER BY tbl;"
+
